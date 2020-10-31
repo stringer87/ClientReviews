@@ -1,0 +1,37 @@
+{
+  "name": "clientreviews",
+  "version": "1.0.0",
+  "description": "Client Review application",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stringer87/ClientReviews.git"
+  },
+  "author": "Michael Stringer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stringer87/ClientReviews/issues"
+  },
+  "homepage": "https://github.com/stringer87/ClientReviews#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "mongoose": "^5.10.11",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0"
+  }
+}
