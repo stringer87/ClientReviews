@@ -4,7 +4,8 @@
   "description": "Client Review application",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack-dev": "webpack --watch",
+    "start": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,11 @@
   "homepage": "https://github.com/stringer87/ClientReviews#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "mongoose": "^5.10.11",
+    "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1"
