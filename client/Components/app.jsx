@@ -3,12 +3,15 @@ import axios from 'axios';
 import RecentClientModal from './clientReview/RecentClientModal.jsx';
 import RecentClient from './clientReview/RecentClient.jsx';
 import Layout from './windowLayout/Layout.jsx'
+import { MenuProvider } from './stateContext.jsx';
 
 const { clients } = require('./sampleData')
 
 function App() {
   return <>
-    <Layout />
+    <MenuProvider>
+      <Layout />
+    </MenuProvider>
     {/* {clients.map((client) => {
       return <RecentClient client={client} key={client._id} />
     })} */}
