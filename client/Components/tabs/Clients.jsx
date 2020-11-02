@@ -10,10 +10,12 @@ function Clients({ clients }) {
   const [menu, setMenu] = useContext(MenuContext);
   const [search, setSearch] = useState('');
   return <>
-    <SearchWrapper>
-      <SearchBar onChange={(e) => setSearch(e.target.value)} />
-      <Search>🔍</Search>
-    </SearchWrapper>
+    {
+      menu.clients && <SearchWrapper>
+        <SearchBar onChange={(e) => setSearch(e.target.value)} />
+        <Search>🔍</Search>
+      </SearchWrapper>
+    }
     {menu.clients && clients.map((client) => {
       if (search) {
         if (client.fullName.toLowerCase().includes(search.toLowerCase())) {
