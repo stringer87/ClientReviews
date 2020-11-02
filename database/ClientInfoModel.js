@@ -6,6 +6,7 @@ const clientSchema = new Schema({
   avatar: String,
   firstName: String,
   lastName: String,
+  fullName: String,
   phone: String,
   email: String,
   rating: Number

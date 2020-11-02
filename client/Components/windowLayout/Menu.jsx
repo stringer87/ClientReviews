@@ -6,7 +6,8 @@ const { MenuWrapper } = require('./MenuStyles');
 
 
 function Menu() {
-  const [menu, setMenu] = useContext(MenuContext)
+  const [menu, setMenu] = useContext(MenuContext);
+
   const updateLayout = (e) => {
     let name = e.target.name;
     let previous = menu.contentDisplayed;
