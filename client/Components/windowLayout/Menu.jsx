@@ -11,7 +11,9 @@ function Menu() {
   const updateLayout = (e) => {
     let name = e.target.name;
     let previous = menu.contentDisplayed;
-    setMenu((current) => ({ ...current, [name]: true, [previous]: false, contentDisplayed: name }))
+    if (name !== previous) {
+      setMenu((current) => ({ ...current, [name]: true, [previous]: false, contentDisplayed: name }))
+    }
   }
   return <>
     <MenuWrapper>

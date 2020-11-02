@@ -5,14 +5,10 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchBar = styled.input`
-  width: 95%;
+  width: 690px;
   margin-left: auto;
   margin-right: auto;
   height: 30px;
   font-size: 25px;
   border-radius: 5px;
-`;
-
-export const Search = styled.button`
-  font-size: 20px;
 `;
