@@ -7,15 +7,15 @@ const { ClientInfoContainer } = require('./RecentClientStyles');
 const { ClientInfoList } = require('./RecentClientStyles');
 const { InfoListEntry } = require('./RecentClientStyles');
 
-function RecentClient({ client }) {
+function RecentClient({ client, selection }) {
   return <>
-    <Card>
+    <Card onClick={selection} data-id={client._id}>
       <AvatarContainer>
         <Avatar src={`${client.avatar}`} />
       </AvatarContainer>
       <ClientInfoContainer>
         <ClientInfoList>
-          <InfoListEntry>{`${client.firstName} ${client.lastName}`}</InfoListEntry>
+          <InfoListEntry>{`${client.fullName}`}</InfoListEntry>
           <InfoListEntry>Service Placeholder</InfoListEntry>
           <InfoListEntry>Date Placeholder</InfoListEntry>
         </ClientInfoList>
