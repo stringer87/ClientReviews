@@ -11,7 +11,7 @@ function RecentClientTab() {
   const [client, setClient] = useState({})
 
   useEffect(() => {
-    axios.get('/api/clients')
+    axios.get('/api/recentClients')
       .then(({ data }) => {
         setClients(data)
       })

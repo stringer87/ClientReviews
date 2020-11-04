@@ -15,9 +15,9 @@ function RecentClient({ client }) {
       </AvatarContainer>
       <ClientInfoContainer>
         <ClientInfoList>
-          <InfoListEntry>{`${client.fullName}`}</InfoListEntry>
-          <InfoListEntry>More Info Placeholder</InfoListEntry>
-          <InfoListEntry>Last Seen Placeholder</InfoListEntry>
+          <InfoListEntry>{`${client.firstName}`}</InfoListEntry>
+          <InfoListEntry>{`${client.lastName}`}</InfoListEntry>
+          <InfoListEntry>{`${client.email}`}</InfoListEntry>
         </ClientInfoList>
       </ClientInfoContainer>
     </Card>

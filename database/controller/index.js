@@ -4,7 +4,7 @@ const { RecentClients } = require('../RecentClientModel');
 const { ClientReview } = require('../ClientReviewModel');
 const getClients = (req, res) => {
   console.log(Client)
-  Client.find({})
+  Client.find({}).sort('firstName')
     .then((clients) => {
       res.status(200).send(clients)
     })
@@ -24,7 +24,7 @@ const getClient = (req, res) => {
     })
 }
 const getRecentClients = (req, res) => {
-  RecentClients.find({})
+  RecentClients.find({}).sort('date')
     .then((clients) => {
       console.log(clients)
       res.status(200).send(clients);

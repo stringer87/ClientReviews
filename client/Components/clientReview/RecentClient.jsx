@@ -16,8 +16,8 @@ function RecentClient({ client, selection }) {
       <ClientInfoContainer>
         <ClientInfoList>
           <InfoListEntry>{`${client.fullName}`}</InfoListEntry>
-          <InfoListEntry>Service Placeholder</InfoListEntry>
-          <InfoListEntry>Date Placeholder</InfoListEntry>
+          <InfoListEntry>{`${client.service}`}</InfoListEntry>
+          <InfoListEntry>{`${client.date}`}</InfoListEntry>
         </ClientInfoList>
       </ClientInfoContainer>
     </Card>
