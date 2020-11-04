@@ -8,6 +8,7 @@ export function MenuProvider(props) {
     recentClients: false,
     contentDisplayed: 'clients',
     modal: false,
+    activeClientModal: false,
   });
   return (
     <MenuContext.Provider value={[menu, setMenu]}>

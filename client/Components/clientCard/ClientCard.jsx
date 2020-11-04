@@ -7,9 +7,9 @@ const { ClientInfoContainer } = require('./ClientCardStyles');
 const { ClientInfoList } = require('./ClientCardStyles');
 const { InfoListEntry } = require('./ClientCardStyles');
 
-function RecentClient({ client }) {
+function RecentClient({ client, view }) {
   return <>
-    <Card>
+    <Card data-id={client._id} onClick={view}>
       <AvatarContainer>
         <Avatar src={`${client.avatar}`} />
       </AvatarContainer>

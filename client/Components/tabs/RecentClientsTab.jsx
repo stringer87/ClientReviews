@@ -22,17 +22,22 @@ function RecentClientTab() {
   }
   const handelReview = (e) => {
     const id = e.currentTarget.getAttribute('data-id');
-    axios.get('/api/client', { params: { id: id } })
-      .then(({ data }) => {
-        setClient(data[0]);
-        setMenu((current) => ({ ...current, modal: true }));
-      })
-      .catch((err) => console.log(err))
+    if (menu.modal) {
+      setMenu((current) => ({ ...current, modal: false }));
+    } else {
+      axios.get('/api/client', { params: { id: id } })
+        .then(({ data }) => {
+          setClient(data[0]);
+          setMenu((current) => ({ ...current, modal: true }));
+        })
+        .catch((err) => console.log(err))
+    }
   }
 
   const handelModal = () => {
     setMenu((current) => ({ ...current, modal: false }))
   }
+
   const handelSubmit = (review, rating) => {
     let sum = 0;
     let total = 0;
