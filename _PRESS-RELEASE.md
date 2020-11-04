@@ -1,1 +1,1 @@
-## An Application to help workers review clients they have provided services for
+## An Application to help workers review clients they have provided services to
