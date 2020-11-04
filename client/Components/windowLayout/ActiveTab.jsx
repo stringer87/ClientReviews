@@ -8,15 +8,14 @@ const { RecentClientWrapper } = require('./LayoutStyles');
 
 
 
-const { clients } = require('../sampleData')
 
 function ActiveTab() {
   const [menu, setMenu] = useContext(MenuContext);
 
   return <>
     <RecentClientWrapper>
-      <RecentClientsTab clients={clients} />
-      <Clients clients={clients} />
+      <RecentClientsTab />
+      <Clients />
     </RecentClientWrapper>
   </>
 }

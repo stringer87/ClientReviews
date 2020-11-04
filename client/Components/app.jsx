@@ -12,10 +12,6 @@ function App() {
     <MenuProvider>
       <Layout />
     </MenuProvider>
-    {/* {clients.map((client) => {
-      return <RecentClient client={client} key={client._id} />
-    })} */}
-    {/* <RecentClientModal /> */}
   </>
 }
 

@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/ClientReview', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/ClientReview', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+
+});
 
 const db = mongoose.connection;
 
