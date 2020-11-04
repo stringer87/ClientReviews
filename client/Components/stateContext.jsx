@@ -6,7 +6,8 @@ export function MenuProvider(props) {
   const [menu, setMenu] = useState({
     clients: true,
     recentClients: false,
-    contentDisplayed: 'clients'
+    contentDisplayed: 'clients',
+    modal: false,
   });
   return (
     <MenuContext.Provider value={[menu, setMenu]}>
