@@ -8,7 +8,7 @@ export const Card = styled.div`
   margin: 5px;
   justify-content: space-around;
   position: relative;
-  background-color: red;
+  background-color: #f0ebd7;
 `;
 
 export const AvatarContainer = styled.div`
@@ -16,13 +16,12 @@ export const AvatarContainer = styled.div`
   height: 80px;
   margin: 10px;
   position: relative;
-  background-color: black;
+  background-color: #8EADB2;
 `;
 
 export const Avatar = styled.img`
   width: 60px;
   height: 60px;
-  background-color: purple;
   position: relative;
   margin: 10px;
 `;
@@ -32,7 +31,7 @@ export const ClientInfoContainer = styled.div`
   height: 80px;
   margin: 10px;
   position: relative;
-  background-color: green;
+  background-color: #E8EBEA;
 `;
 
 export const ClientInfoList = styled.ul`
@@ -45,6 +44,7 @@ export const ClientInfoList = styled.ul`
 
 export const InfoListEntry = styled.li`
   list-style-type: none;
+  color: #8EADB2;
   font-family: sans-serif;
   position: relative;
 `;

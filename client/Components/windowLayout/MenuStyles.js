@@ -10,4 +10,5 @@ border: solid gray 2px;
 export const MenuButton = styled.button`
   width: 200px;
   height: 30px;
+  color: #8EADB2;
 `;

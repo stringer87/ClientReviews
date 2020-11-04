@@ -11,6 +11,8 @@ const { ModalSubmit } = require('./ModalStyles');
 const { ButtonWrapper } = require('./ModalStyles');
 const { ClientInfo } = require('./ModalStyles');
 const { RatingContainer } = require('./ModalStyles');
+const { Rating } = require('./ModalStyles');
+const { Numbers } = require('./ModalStyles');
 
 function RecentClientModal({ client, exit }) {
   return <>
@@ -28,11 +30,17 @@ function RecentClientModal({ client, exit }) {
           <ClientInfo>{client.email}</ClientInfo>
           <ClientInfo>{client.rating}</ClientInfo>
           <RatingContainer>
-            <input type={"radio"} name={"rating"} />
-            <input type={"radio"} name={"rating"} />
-            <input type={"radio"} name={"rating"} />
-            <input type={"radio"} name={"rating"} />
-            <input type={"radio"} name={"rating"} />
+            <Numbers>1</Numbers>
+            <Numbers>2</Numbers>
+            <Numbers>3</Numbers>
+            <Numbers>4</Numbers>
+            <Numbers>5</Numbers>
+            <br />
+            <Rating type={"radio"} name={"rating"} />
+            <Rating type={"radio"} name={"rating"} />
+            <Rating type={"radio"} name={"rating"} />
+            <Rating type={"radio"} name={"rating"} />
+            <Rating type={"radio"} name={"rating"} />
           </RatingContainer>
         </ModalClientDetails>
       </ModalClientContainer>
