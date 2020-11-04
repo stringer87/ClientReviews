@@ -3,7 +3,6 @@ const { Client } = require('../ClientInfoModel');
 const { RecentClients } = require('../RecentClientModel');
 const { ClientReview } = require('../ClientReviewModel');
 const getClients = (req, res) => {
-  console.log(Client)
   Client.find({}).sort('firstName')
     .then((clients) => {
       res.status(200).send(clients)
@@ -26,7 +25,6 @@ const getClient = (req, res) => {
 const getRecentClients = (req, res) => {
   RecentClients.find({}).sort('date')
     .then((clients) => {
-      console.log(clients)
       res.status(200).send(clients);
     })
     .catch((err) => {
@@ -36,7 +34,6 @@ const getRecentClients = (req, res) => {
 
 const getReviews = (req, res) => {
   const id = req.query.id;
-  console.log(id)
   ClientReview.find({ _id: id })
     .then((review) => {
       res.status(200).send(review)

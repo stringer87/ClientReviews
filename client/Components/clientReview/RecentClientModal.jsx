@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const { ModalWrapper } = require('./ModalStyles');
 const { ModalTextInput } = require('./ModalStyles');
@@ -14,7 +14,9 @@ const { RatingContainer } = require('./ModalStyles');
 const { Rating } = require('./ModalStyles');
 const { Numbers } = require('./ModalStyles');
 
-function RecentClientModal({ client, exit }) {
+function RecentClientModal({ client, exit, submit }) {
+  const [rating, setRating] = useState(null);
+  const [review, setReview] = useState('');
   return <>
     <ModalWrapper>
       <ButtonWrapper>
@@ -36,17 +38,17 @@ function RecentClientModal({ client, exit }) {
             <Numbers>4</Numbers>
             <Numbers>5</Numbers>
             <br />
-            <Rating type={"radio"} name={"rating"} />
-            <Rating type={"radio"} name={"rating"} />
-            <Rating type={"radio"} name={"rating"} />
-            <Rating type={"radio"} name={"rating"} />
-            <Rating type={"radio"} name={"rating"} />
+            <Rating type={"radio"} name={"rating"} onChange={() => setRating(1)} />
+            <Rating type={"radio"} name={"rating"} onChange={() => setRating(2)} />
+            <Rating type={"radio"} name={"rating"} onChange={() => setRating(3)} />
+            <Rating type={"radio"} name={"rating"} onChange={() => setRating(4)} />
+            <Rating type={"radio"} name={"rating"} onChange={() => setRating(5)} />
           </RatingContainer>
         </ModalClientDetails>
       </ModalClientContainer>
-      <ModalTextInput></ModalTextInput>
+      <ModalTextInput onChange={(e) => setReview(e.target.value)}></ModalTextInput>
       <ButtonWrapper>
-        <ModalSubmit>Submit</ModalSubmit>
+        <ModalSubmit onClick={() => submit(review, rating)}>Submit</ModalSubmit>
       </ButtonWrapper>
     </ModalWrapper>
   </>
