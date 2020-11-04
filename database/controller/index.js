@@ -1,7 +1,9 @@
 const db = require('../');
-const Client = require('../ClientInfoModel');
-
+const { Client } = require('../ClientInfoModel');
+const { RecentClients } = require('../RecentClientModel');
+const { ClientReview } = require('../ClientReviewModel');
 const getClients = (req, res) => {
+  console.log(Client)
   Client.find({})
     .then((clients) => {
       res.status(200).send(clients)
@@ -21,5 +23,27 @@ const getClient = (req, res) => {
       res.status(400).send(err)
     })
 }
+const getRecentClients = (req, res) => {
+  RecentClients.find({})
+    .then((clients) => {
+      console.log(clients)
+      res.status(200).send(clients);
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    })
+}
 
-module.exports = { getClients, getClient }
+const getReviews = (req, res) => {
+  const id = req.query.id;
+  console.log(id)
+  ClientReview.find({ _id: id })
+    .then((review) => {
+      res.status(200).send(review)
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    })
+}
+
+module.exports = { getClients, getClient, getRecentClients, getReviews }

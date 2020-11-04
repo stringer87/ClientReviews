@@ -8,6 +8,7 @@ export const Card = styled.div`
   margin: 5px;
   justify-content: space-around;
   position: relative;
+  border: solid #8EADB2 1px;
   background-color: #f0ebd7;
 `;
 

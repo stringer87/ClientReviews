@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser')
 const app = express();
 const port = 3000;
-const { getClients, getClient } = require('../database/controller');
+const { getClients, getClient, getRecentClients, getReviews } = require('../database/controller');
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -16,6 +16,13 @@ app.get('/api/clients', (req, res) => {
 
 app.get('/api/client', (req, res) => {
   getClient(req, res);
+})
+
+app.get('/api/recentClients', (req, res) => {
+  getRecentClients(req, res);
+})
+app.get('/api/review', (req, res) => {
+  getReviews(req, res);
 })
 
 app.listen(port, () => {
