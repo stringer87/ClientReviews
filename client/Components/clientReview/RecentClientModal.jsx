@@ -30,7 +30,7 @@ function RecentClientModal({ client, exit, submit }) {
           <ClientInfo>{client.fullName}</ClientInfo>
           <ClientInfo>{client.phone}</ClientInfo>
           <ClientInfo>{client.email}</ClientInfo>
-          <ClientInfo>{client.rating}</ClientInfo>
+          <ClientInfo>rating: {client.rating}</ClientInfo>
           <RatingContainer>
             <Numbers>1</Numbers>
             <Numbers>2</Numbers>

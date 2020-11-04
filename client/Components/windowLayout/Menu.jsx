@@ -12,7 +12,7 @@ function Menu() {
     let name = e.target.name;
     let previous = menu.contentDisplayed;
     if (name !== previous) {
-      setMenu((current) => ({ ...current, [name]: true, [previous]: false, contentDisplayed: name, modal: false }))
+      setMenu((current) => ({ ...current, [name]: true, [previous]: false, contentDisplayed: name, modal: false, activeClientModal: false }))
     }
   }
   return <>

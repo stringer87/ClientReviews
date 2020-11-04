@@ -27,6 +27,7 @@ function ClientModal({ client, exit }) {
             <ClientInfo>{client.lastName}</ClientInfo>
             <ClientInfo>{client.email}</ClientInfo>
             <ClientInfo>{client.phone}</ClientInfo>
+            <ClientInfo>rating: {client.rating}</ClientInfo>
           </ClientInfoWrapper>
         </ModalClientDetails>
       </ModalClientContainer>

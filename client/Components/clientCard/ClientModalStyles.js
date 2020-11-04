@@ -25,6 +25,7 @@ text-align: center;
 display: flex;
 flex-direction: column;
 background: #E8EBEA;
+border: solid #8EADB2 1px;
 width: 200px;
 height: 200px;
 max-height: 200px;
@@ -35,8 +36,7 @@ width: 200px;
 height: 200px;
 `;
 export const ClientInfoWrapper = styled.div`
-padding:30px;
-border: solid #8EADB2 1px;
+padding:20px;
 text-align: center;
 word-wrap: break-word;
 display: flex;
@@ -45,7 +45,7 @@ background: #E8EBEA;
 `;
 export const ClientInfo = styled.span`
   margin: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif;
 `;
 
